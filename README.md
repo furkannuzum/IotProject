@@ -68,7 +68,7 @@ Key components of the system include:
 ### Software Setup
 1. Clone the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/IoTProject.git
+   git clone https://github.com/furkannuzum/IoTProject.git
    ```
 2. Install dependencies:
    - For Python, install OpenCV using `pip install opencv-python`.
