@@ -1,18 +1,9 @@
-### README.md for IoT Project
-
----
-
-# IoT Project
-
 ## Project Overview
-
 This project aims to combine image processing and IoT devices to monitor and control various environmental and device parameters using ESP32 devices and sensors. The core functionality involves real-time hand gesture recognition, where the number of fingers detected by a camera is sent to ESP32 devices to control LEDs, a 7-segment display, and other components such as temperature sensors and buzzers.
-
 Key components of the system include:
 - **Image Processing** using OpenCV for real-time hand gesture detection
 - **ESP32 Communication** for controlling devices based on detected hand gestures
 - **Web Integration** for data visualization and remote access to results
-
 ## Hardware Components
 - **ESP32**: Microcontroller responsible for handling data, controlling LEDs, and interfacing with sensors
 - **LEDs & 7-Segment Display**: Used for visual feedback based on hand gesture input
@@ -20,33 +11,25 @@ Key components of the system include:
 - **Ultrasonic Sensor**: Measures distance for environmental data collection
 - **Buzzer**: Provides auditory feedback
 - **RGB LED**: Visual feedback with multiple colors based on the sensor input
-
 ## Software Libraries
 - **OpenCV**: For image processing (detecting fingers)
 - **ESP32 WebServer**: For handling HTTP requests and controlling devices
 - **HTTPClient**: For making HTTP GET requests to send data to a web server
 - **DHT11**: For reading temperature and humidity data
-
 ## Key Features
-
 ### 1. Hand Gesture Detection
 - A camera captures the image and detects the number of fingers using OpenCV.
 - A Region of Interest (ROI) is defined, and the image is processed (converted to grayscale, blurred, thresholded).
 - The number of fingers is determined by analyzing the contours in the image.
-
 ### 2. ESP32 Control
 - The detected number of fingers is sent to an ESP32 device via an HTTP GET request.
 - The ESP32 controls LEDs and displays the number on a 7-segment display according to the number of fingers detected.
-
 ### 3. Web Integration
 - The detected data is sent to a website, where the information is stored in a database and can be accessed remotely.
-
 ### 4. Data Visualization and Control
 - Based on the received finger count, the system provides visual feedback (LED and 7-segment display).
 - Additional environmental data (temperature, humidity, distance) is also collected and displayed.
-
 ## Project Structure
-
 ```bash
 |-- src/
 |   |-- main/
@@ -57,14 +40,11 @@ Key components of the system include:
 |-- docs/
 |   |-- IotProje.pdf (Project documentation)
 ```
-
 ## Setup and Installation
-
 ### Hardware Setup
 1. **ESP32**: Connect the ESP32 to your network using Wi-Fi credentials in the code.
 2. **Sensors**: Attach the necessary sensors (DHT11, Ultrasonic, etc.) to the specified pins on the ESP32.
 3. **LEDs & 7-Segment Display**: Connect the LEDs and 7-segment display to the appropriate pins.
-
 ### Software Setup
 1. Clone the repository to your local machine.
    ```bash
@@ -92,7 +72,3 @@ Key components of the system include:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-This README file provides an overview of the IoT project, detailing the hardware, software, features, and how to set it up. You can tailor the details further if needed.
